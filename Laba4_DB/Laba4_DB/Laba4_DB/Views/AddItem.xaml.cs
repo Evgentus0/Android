@@ -54,15 +54,26 @@ namespace Laba4_DB.Views
 
             var newCar = section.Select(x => (EntryCell)x).ToList();
 
-            car.Brand = newCar[0].Text;
-            car.Color = newCar[1].Text;
-            car.Type = newCar[2].Text;
-            car.Volume = double.Parse(newCar[3].Text);
-            car.Price = decimal.Parse(newCar[4].Text);
+            if (newCar.Any(x=>string.IsNullOrEmpty(x.Text)))
+            {
+                await DisplayAlert("Alarm", "Some values are null or empty!", "OK");
+            }
+            else if (!double.TryParse(newCar[3].Text, out double value1) || !double.TryParse(newCar[4].Text, out double value2))
+            {
+                await DisplayAlert("Alarm", "Volume or Price are incorrect!", "OK");
+            }
+            else
+            {
+                car.Brand = newCar[0].Text;
+                car.Color = newCar[1].Text;
+                car.Type = newCar[2].Text;
+                car.Volume = double.Parse(newCar[3].Text);
+                car.Price = decimal.Parse(newCar[4].Text);
 
-            AddSucceded(this, new EventEditCarArgs() { Car = car });
+                AddSucceded(this, new EventEditCarArgs() { Car = car });
 
-            await Navigation.PopAsync();
+                await Navigation.PopAsync();
+            }
         }
     }
 }
