@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29806.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Laba_Android.Android", "Laba3\Laba3.Android\Laba_Android.Android.csproj", "{718E10C4-D75E-4B7B-96A3-6E8A01D275E4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Laba_Android", "Laba3\Laba3\Laba_Android.csproj", "{B189485E-40B5-43B4-B554-AA548A0A7818}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{718E10C4-D75E-4B7B-96A3-6E8A01D275E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{718E10C4-D75E-4B7B-96A3-6E8A01D275E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{718E10C4-D75E-4B7B-96A3-6E8A01D275E4}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{718E10C4-D75E-4B7B-96A3-6E8A01D275E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{718E10C4-D75E-4B7B-96A3-6E8A01D275E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{718E10C4-D75E-4B7B-96A3-6E8A01D275E4}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{B189485E-40B5-43B4-B554-AA548A0A7818}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B189485E-40B5-43B4-B554-AA548A0A7818}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B189485E-40B5-43B4-B554-AA548A0A7818}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{B189485E-40B5-43B4-B554-AA548A0A7818}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B189485E-40B5-43B4-B554-AA548A0A7818}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B189485E-40B5-43B4-B554-AA548A0A7818}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DC467970-5C05-4166-93C2-F72BCFCDA00B}
+	EndGlobalSection
+EndGlobal

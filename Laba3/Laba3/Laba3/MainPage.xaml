@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Laba3.MainPage">
+
+    <Grid Margin="20,35,20,20">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+        </Grid.RowDefinitions>
+
+        <Image Source="formula1.png"
+       HorizontalOptions="Center" 
+               Grid.ColumnSpan="3"/>
+
+
+        <Label Grid.Row="1" Grid.Column="0"
+           Text="From: " FontSize = "16" />
+        <Entry x:Name="inputFrom"
+            Grid.Row="1" Grid.Column="1" Text="0" />
+        <Label Grid.Row="1" Grid.Column="2"
+               Text="To: " FontSize = "16"/>
+        <Entry x:Name="inputTo"
+            Grid.Row="1" Grid.Column="3" Text="0" />
+        <Label Grid.Row="2" Grid.Column="0"
+               Text="Step:" FontSize = "16"/>
+        <Entry x:Name="inputStep"
+            Grid.Row="2" Grid.Column="1" Text="0" />
+        <Label x:Name="labelParams" Text="" Grid.Row="3"
+               Grid.ColumnSpan="4"
+               FontSize="16"/>
+        <Button Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="3"
+                Text="Calculate and write to file" 
+                Clicked="CalculateAndWriteToFile_click"/>
+        <Button Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="3"
+                Text="Read from file as text" 
+                Clicked="ReadFromFileAsText_click"/>
+        <Button Grid.Column="0" Grid.Row="6"
+                Text="Show Plot" 
+                Clicked="ViewResultAsPlot_click"
+                Grid.ColumnSpan="3"/>
+        <Button Grid.Column="0" Grid.Row="7"
+                Text="Click to give info" 
+                Clicked="Info_Clicked"
+                Grid.ColumnSpan="2"/>
+    </Grid>
+
+
+
+</ContentPage>
