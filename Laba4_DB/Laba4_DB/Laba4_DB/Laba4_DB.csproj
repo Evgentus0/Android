@@ -3,6 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+    <UserSecretsId>a165c71d-33ee-4bf2-ab9e-ab99ad36f487</UserSecretsId>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -12,9 +13,15 @@
 
   <ItemGroup>
     <PackageReference Include="OxyPlot.Xamarin.Forms" Version="1.0.0" />
-    <PackageReference Include="Xamarin.Forms" Version="4.3.0.908675" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.3.1" />
+    <PackageReference Include="Xam.Plugin.Geolocator" Version="4.5.0.6" />
+    <PackageReference Include="Xamarin.Forms" Version="4.6.0.800" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
     <PackageReference Include="Xamarin.Forms.Contacts" Version="1.0.5" />
+    <PackageReference Include="Xamarin.Forms.Maps" Version="4.6.0.800" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\SQLiteApp\SQLiteApp.csproj" />
   </ItemGroup>
 
   <ItemGroup>
@@ -53,6 +60,15 @@
     </EmbeddedResource>
     <EmbeddedResource Update="Views\ExpressionAndPlot\ViewPlot.xaml">
       <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Maps\CurrentLocation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Maps\FindLocation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Maps\MapsMain.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\Shared\MenuPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>

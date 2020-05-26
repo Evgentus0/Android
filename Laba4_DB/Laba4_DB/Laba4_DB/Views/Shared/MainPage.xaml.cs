@@ -1,10 +1,10 @@
-﻿using Laba4_DB.Helpers;
-using Laba4_DB.Interfaces;
-using Laba4_DB.Models;
+﻿using Laba4_DB.Models;
 using Laba4_DB.Views;
 using Laba4_DB.Views.Contacts;
 using Laba4_DB.Views.DataBase;
 using Laba4_DB.Views.ExpressionAndPlot;
+using Laba4_DB.Views.Maps;
+using SQLiteApp;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -47,15 +47,15 @@ namespace Laba4_DB
                     case (int)MenuItemType.Lab5:
                         MenuPages.Add(id, new NavigationPage(new ContactsMain()));
                         break;
-                    //case (int)MenuItemType.Lab6:
-                    //    MenuPages.Add(id, new NavigationPage(new ContactsPage()));
-                    //    break;
-                    //case (int)MenuItemType.About:
-                    //    MenuPages.Add(id, new NavigationPage(new AboutPage()));
-                    //    break;
-                    //case (int)MenuItemType.Help:
-                    //    MenuPages.Add(id, new NavigationPage(new SummuriesPage()));
-                    //    break;
+                    case (int)MenuItemType.Lab6:
+                        MenuPages.Add(id, new NavigationPage(new MapsMain()));
+                        break;
+                        //case (int)MenuItemType.About:
+                        //    MenuPages.Add(id, new NavigationPage(new AboutPage()));
+                        //    break;
+                        //case (int)MenuItemType.Help:
+                        //    MenuPages.Add(id, new NavigationPage(new SummuriesPage()));
+                        //    break;
                 }
             }
 

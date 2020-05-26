@@ -1,6 +1,4 @@
-﻿using Laba4_DB.Interfaces;
-using Laba4_DB.Models;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;

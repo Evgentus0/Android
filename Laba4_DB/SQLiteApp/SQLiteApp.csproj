@@ -8,8 +8,4 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.2" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Laba4_DB\Laba4_DB\Laba4_DB.csproj" />
-  </ItemGroup>
-
 </Project>

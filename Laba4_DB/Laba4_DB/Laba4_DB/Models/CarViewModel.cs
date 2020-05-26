@@ -1,4 +1,4 @@
-﻿using Laba4_DB.Interfaces;
+﻿using SQLiteApp;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

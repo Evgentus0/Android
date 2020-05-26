@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Laba4_DB.Models
+namespace SQLiteApp
 {
     public class Car
     {

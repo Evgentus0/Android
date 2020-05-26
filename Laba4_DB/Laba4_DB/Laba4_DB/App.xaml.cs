@@ -1,5 +1,5 @@
-﻿using Laba4_DB.Interfaces;
-using Laba4_DB.Views;
+﻿using Laba4_DB.Views;
+using SQLiteApp;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;

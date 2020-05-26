@@ -1,10 +1,9 @@
-﻿using Laba4_DB.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Laba4_DB.Interfaces
+namespace SQLiteApp
 {
     public interface ICarRepository
     {
