@@ -1,27 +1,26 @@
 ﻿using Laba4_DB.Helpers;
 using Laba4_DB.Interfaces;
 using Laba4_DB.Models;
-using Laba4_DB.Views;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
 using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
-using Xamarin.Forms;
 
-namespace Laba4_DB
+using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
+
+namespace Laba4_DB.Views.DataBase
 {
-    // Learn more about making custom code visible in the Xamarin.Forms previewer
-    // by visiting https://aka.ms/xamarinforms-previewer
-    [DesignTimeVisible(false)]
-    public partial class MainPage : ContentPage
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class DataBaseMain : ContentPage
     {
+
         private readonly ICarRepository carRepository;
-        public MainPage(ICarRepository carRepository)
+        public DataBaseMain(ICarRepository carRepository)
         {
             InitializeComponent();
+
             this.carRepository = carRepository;
 
             //carRepository.CreateRangeAsync(CarViewModel.InitDB());
@@ -66,11 +65,11 @@ namespace Laba4_DB
             var filter = new Button() { Text = "Filter" };
             filter.Clicked += FilterButton_clicked;
 
-          //  var addItem = new Button() { Text = "Add Item" };
-          //  addItem.Clicked += AddItemBuuton_clicked;
+            //  var addItem = new Button() { Text = "Add Item" };
+            //  addItem.Clicked += AddItemBuuton_clicked;
 
             tableSection.Add(new ViewCell() { View = filter });
-          //  tableSection.Add(new ViewCell() { View = addItem });
+            //  tableSection.Add(new ViewCell() { View = addItem });
 
             return tableSection;
         }
@@ -158,7 +157,7 @@ namespace Laba4_DB
             var root = table.Root;
             var section = root[1];
 
-            var cell = (ViewCell)section.Where(x=> { var cl = (ViewCell)x; return cl.View is Grid; }).First(x =>
+            var cell = (ViewCell)section.Where(x => { var cl = (ViewCell)x; return cl.View is Grid; }).First(x =>
             {
                 var cl = (ViewCell)x;
                 var gr = (Grid)cl.View;

@@ -12,7 +12,7 @@ namespace Laba4_DB
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new MainPage(carRepository));
+            MainPage = new MainPage(carRepository);
         }
 
         protected override void OnStart()
