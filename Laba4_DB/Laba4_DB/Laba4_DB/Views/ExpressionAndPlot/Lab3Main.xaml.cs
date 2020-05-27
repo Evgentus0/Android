@@ -2,6 +2,7 @@
 using Laba3.BLL;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,6 +23,15 @@ namespace Laba4_DB.Views.ExpressionAndPlot
         public Lab3Main()
         {
             InitializeComponent();
+            Title = "Lab 3";
+
+            z_parametr = 13;
+            b_parametr = 0.000000000423;
+            a_parametr = 0.00000324;
+            calculator = new Calculator(z_parametr, b_parametr, a_parametr);
+            labelParams.Text = $"z = {z_parametr}; b = {b_parametr}; a = {a_parametr}";
+            filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "result.txt");
+            fileWorker = new FileWork(filePath);
         }
 
         private async void CalculateAndWriteToFile_click(object sender, EventArgs e)
@@ -73,15 +83,6 @@ namespace Laba4_DB.Views.ExpressionAndPlot
             {
                 await DisplayAlert("Alarm!", ex.Message, "OK");
             }
-        }
-
-        private async void Info_Clicked(object sender, EventArgs e)
-        {
-            var newLine = Environment.NewLine;
-            string message = $"My name is Yevhenii Romanenko.{newLine}" +
-                             $"I stady in a group TTP-3 on faculty of Computer Science and Cybernetics{newLine}" +
-                             $"At the end of this course I would like to get more knowledge about mobile delepopment";
-            await DisplayAlert("Information", message, "OK");
         }
     }
 }

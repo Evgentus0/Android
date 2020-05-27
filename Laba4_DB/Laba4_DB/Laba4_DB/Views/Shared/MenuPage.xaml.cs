@@ -22,18 +22,18 @@ namespace Laba4_DB.Views.Shared
 
             menuItems = new List<HomeMenuItem>
             {
+                new HomeMenuItem {Id = MenuItemType.About, Title="About" },
+                new HomeMenuItem {Id = MenuItemType.Help, Title="Help"},
                 new HomeMenuItem {Id = MenuItemType.Lab123, Title="Lab 1, 2, 3" },
                 new HomeMenuItem {Id = MenuItemType.Lab4, Title="Lab 4" },
                 new HomeMenuItem {Id = MenuItemType.Lab5, Title="Lab 5" },
-                new HomeMenuItem {Id = MenuItemType.Lab6, Title="Lab 6"},
-                new HomeMenuItem {Id = MenuItemType.Help, Title="Help"},
-                new HomeMenuItem {Id = MenuItemType.About, Title="About" }
+                new HomeMenuItem {Id = MenuItemType.Lab6, Title="Lab 6"}
 
             };
 
             ListViewMenu.ItemsSource = menuItems;
 
-            ListViewMenu.SelectedItem = menuItems[2];
+            ListViewMenu.SelectedItem = menuItems[0];
             ListViewMenu.ItemSelected += async (sender, e) =>
             {
                 if (e.SelectedItem == null)

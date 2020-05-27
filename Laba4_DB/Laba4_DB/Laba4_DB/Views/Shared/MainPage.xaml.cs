@@ -3,6 +3,7 @@ using Laba4_DB.Views;
 using Laba4_DB.Views.Contacts;
 using Laba4_DB.Views.DataBase;
 using Laba4_DB.Views.ExpressionAndPlot;
+using Laba4_DB.Views.Helpers;
 using Laba4_DB.Views.Maps;
 using SQLiteApp;
 using System;
@@ -31,6 +32,8 @@ namespace Laba4_DB
 
             MasterBehavior = MasterBehavior.Popover;
 
+            MenuPages.Add((int)MenuItemType.About, (NavigationPage)Detail);
+
         }
         public async Task NavigateFromMenu(int id)
         {
@@ -50,12 +53,12 @@ namespace Laba4_DB
                     case (int)MenuItemType.Lab6:
                         MenuPages.Add(id, new NavigationPage(new MapsMain()));
                         break;
-                        //case (int)MenuItemType.About:
-                        //    MenuPages.Add(id, new NavigationPage(new AboutPage()));
-                        //    break;
-                        //case (int)MenuItemType.Help:
-                        //    MenuPages.Add(id, new NavigationPage(new SummuriesPage()));
-                        //    break;
+                    case (int)MenuItemType.About:
+                        MenuPages.Add(id, new NavigationPage(new AboutMe()));
+                        break;
+                    case (int)MenuItemType.Help:
+                        MenuPages.Add(id, new NavigationPage(new HelpPage()));
+                        break;
                 }
             }
 

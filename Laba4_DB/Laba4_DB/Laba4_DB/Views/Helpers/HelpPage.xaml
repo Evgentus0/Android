@@ -4,12 +4,6 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="Laba4_DB.Views.AboutMe">
+             x:Class="Laba4_DB.Views.Helpers.HelpPage">
 
-    <StackLayout Margin="10, 5, 10, 5">
-        <Image x:Name="myPhoto" />
-        <Label x:Name="aboutMe"
-               TextColor="Black" FontSize="18"/>
-    </StackLayout>
-    
 </ContentPage>

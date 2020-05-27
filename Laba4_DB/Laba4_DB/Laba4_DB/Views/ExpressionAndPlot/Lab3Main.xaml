@@ -54,10 +54,6 @@
                 Text="Show Plot" 
                 Clicked="ViewResultAsPlot_click"
                 Grid.ColumnSpan="3"/>
-        <Button Grid.Column="0" Grid.Row="7"
-                Text="Click to give info" 
-                Clicked="Info_Clicked"
-                Grid.ColumnSpan="2"/>
     </Grid>
 
 </ContentPage>
